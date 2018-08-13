@@ -16,13 +16,17 @@ public class Lift {
 
 	public String findLiftControl() {
 		if (this.isWeightMoreThanLimit()) {
-			return "stop";
+			this.setControl("stop");
+		} else {
+			if (this.currentFloor == this.targetFloor) {
+				this.setControl("stop");
+			} else if (this.currentFloor < this.targetFloor) {
+				this.setControl("up");
+			} else if (this.currentFloor > this.targetFloor) {
+				this.setControl("down");
+			}
 		}
-
-		if (this.currentFloor < this.floor) {
-			return "up";
-		}
-		return "";
+		return this.getControl();
 	}
 	
 	public boolean isWeightMoreThanLimit() {
