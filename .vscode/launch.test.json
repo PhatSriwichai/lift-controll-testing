@@ -1,0 +1,30 @@
+{
+    "run": {
+        "default": "",
+        "items": [
+            {
+                "name": "lift",
+                "projectName": "lift",
+                "workingDirectory": "/home/phat/Mojito/learn/lift-controll-testing",
+                "args": [],
+                "vmargs": [],
+                "env": {},
+                "preLaunchTask": ""
+            }
+        ]
+    },
+    "debug": {
+        "default": "",
+        "items": [
+            {
+                "name": "lift",
+                "projectName": "lift",
+                "workingDirectory": "/home/phat/Mojito/learn/lift-controll-testing",
+                "args": [],
+                "vmargs": [],
+                "env": {},
+                "preLaunchTask": ""
+            }
+        ]
+    }
+}

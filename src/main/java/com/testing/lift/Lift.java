@@ -12,7 +12,15 @@ public class Lift {
 
     private int targetFloor;
 
-    private String control;
+	private String control;
+
+	public String findLiftControl() {
+		return "";
+	}
+	
+	public boolean isWeightMoreThanLimit() {
+		return true;
+	}
 
 	/**
 	 * @return the maxWeight
