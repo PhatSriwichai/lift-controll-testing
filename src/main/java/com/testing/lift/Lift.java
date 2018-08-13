@@ -15,11 +15,15 @@ public class Lift {
 	private String control;
 
 	public String findLiftControl() {
+		if (this.isWeightMoreThanLimit()) {
+			return "stop";
+		}
 		return "";
 	}
 	
 	public boolean isWeightMoreThanLimit() {
-		return true;
+		if (this.currentWeight > this.maxWeight) return true;
+		return false;
 	}
 
 	/**
