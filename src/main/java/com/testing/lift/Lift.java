@@ -18,6 +18,10 @@ public class Lift {
 		if (this.isWeightMoreThanLimit()) {
 			return "stop";
 		}
+
+		if (this.currentFloor < this.floor) {
+			return "up";
+		}
 		return "";
 	}
 	

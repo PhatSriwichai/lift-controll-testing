@@ -1,5 +1,6 @@
 package com.testing.lift;
 
+import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 import static org.mockito.MockitoAnnotations.initMocks;
 
@@ -31,5 +32,21 @@ public class LiftTest {
 
         String control = lift.findLiftControl();
         assertTrue(expected.equals(control));
+    }
+
+    @Test
+    public void weightNotMoreThanLimitAndFloorZeroToTopShouldReturnUp() {
+
+        String expected = "up";
+
+        Lift lift = new Lift();
+        lift.setMaxWeight(1000);
+        lift.setCurrentWeight(600);
+        lift.setFloor(10);
+        lift.setTargetFloor(10);
+        lift.setCurrentFloor(0);
+
+        String control = lift.findLiftControl();
+        assertEquals(expected, control);
     }
 }
